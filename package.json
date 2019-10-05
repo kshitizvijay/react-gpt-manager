@@ -1,13 +1,24 @@
 {
   "name": "react-gpt-manager",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple React component to load DFP ads through gpt.js",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kshitizvijay/react-gpt-manager.git"
+  },
+  "keywords": [
+    "react-component",
+    "react",
+    "dfp",
+    "gpt"
+  ],
+  "homepage": "https://github.com/kshitizvijay/react-gpt-manager",
+  "author": "kshitiz vijay",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.2",
