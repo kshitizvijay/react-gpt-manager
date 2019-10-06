@@ -18,3 +18,7 @@ setTimeout(() => {
 }, 3000);
 
 ```
+
+## Example
+
+https://codesandbox.io/s/cocky-pascal-e2zuf
