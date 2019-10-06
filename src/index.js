@@ -21,11 +21,12 @@ export function displayAd(list) {
   if (!Array.isArray(react_gpt_ads_list)) {
     return;
   }
+  const react_gpt_ads_list_clone = [...react_gpt_ads_list];
   window.googletag = window.googletag || {};
   window.googletag.cmd = window.googletag.cmd || [];
   const { googletag } = window;
   googletag.cmd.push(() => {
-    react_gpt_ads_list.forEach(adItem => {
+    react_gpt_ads_list_clone.forEach(adItem => {
       const { adUnitPath, size, elementId } = adItem;
       const adCodeObj = googletag.defineSlot(adUnitPath, size, elementId);
       adCodeObj.addService(googletag.pubads());
@@ -35,11 +36,11 @@ export function displayAd(list) {
     googletag.pubads().enableAsyncRendering();
     googletag.pubads().collapseEmptyDivs(true);
     googletag.enableServices();
-    react_gpt_ads_list.forEach(adItem => {
+    react_gpt_ads_list_clone.forEach(adItem => {
       googletag.display(adItem.elementId);
     });
-    emptyList();
   });
+  emptyList();
 }
 
 export class DfpAdItem extends React.Component {
@@ -50,9 +51,6 @@ export class DfpAdItem extends React.Component {
   componentDidMount() {
     const { adUnitPath, size, elementId } = this.props;
     addtoList(adUnitPath, size, elementId);
-    setTimeout(() => {
-      displayAd();
-    }, 2000);
   }
   render() {
     const { adUnitPath, size, elementId } = this.props;

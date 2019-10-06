@@ -1,4 +1,4 @@
-import { DfpAdItem } from '../src/index';
+import { DfpAdItem, displayAd } from '../src/index';
 import ReactDOM from 'react-dom';
 import React from 'react';
 const wrapper = document.getElementById('container');
@@ -19,3 +19,6 @@ wrapper
       wrapper,
     )
   : false;
+setTimeout(() => {
+  displayAd();
+}, 3000);
