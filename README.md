@@ -22,3 +22,8 @@ setTimeout(() => {
 ## Example
 
 https://codesandbox.io/s/cocky-pascal-e2zuf
+
+## Notes
+Hi!!!
+Thanks for checking out my react-gpt-manager
+If you have any issues, feature request or suggestions, raise an issue and We will reply soon.
